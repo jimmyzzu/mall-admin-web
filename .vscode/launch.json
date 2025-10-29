@@ -1,0 +1,17 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "chrome", // 使用 Chrome 调试器
+      "request": "launch",
+      "name": "Vue: Chrome Debug",
+      "url": "http://localhost:8090", // Vue dev server 的地址
+      "webRoot": "${workspaceFolder}/src", // 源码根路径
+      "sourceMaps": true,
+      "runtimeArgs": [
+        "--proxy-server=http=127.0.0.1:7890;https=127.0.0.1:7890",
+        "--ignore-certificate-errors"
+      ]
+    }
+  ]
+}
