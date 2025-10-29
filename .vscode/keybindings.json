@@ -1,0 +1,5 @@
+{
+    "key": "alt+j",
+    "command": "vim.toggleVim",
+    "when": "editorTextFocus" // 仅在编辑器有焦点时生效（可选）
+}
