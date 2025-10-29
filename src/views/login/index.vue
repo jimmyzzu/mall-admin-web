@@ -122,9 +122,13 @@
         }
       },
       handleLogin() {
+        // ref="loginForm" 给这个 <el-form> 加了一个引用名；
+        // 在脚本中就能通过 this.$refs.loginForm 访问到这个 el-form 组件实例；
+        // 而 .validate() 是 Element UI 表单实例提供的 表单验证方法，用于触发 loginRules 中定义的校验规则,并执行callback方法。
+        // valid => () 是注册给loginfrom的validate验证完成后的callback方法，验证是按照:rules规则进行验证的
         this.$refs.loginForm.validate(valid => {
           if (valid) {
-            // let isSupport = getSupport();
+              // let isSupport = getSupport();
             // if(isSupport===undefined||isSupport==null){
             //   this.dialogVisible =true;
             //   return;
