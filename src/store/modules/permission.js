@@ -66,8 +66,8 @@ function compare(p){
 
 const permission = {
   state: {
-    routers: constantRouterMap,
-    addRouters: []
+    routers: constantRouterMap, // 当前用户可访问的路由
+    addRouters: [] // 动态添加的路由
   },
   mutations: {
     SET_ROUTERS: (state, routers) => {
